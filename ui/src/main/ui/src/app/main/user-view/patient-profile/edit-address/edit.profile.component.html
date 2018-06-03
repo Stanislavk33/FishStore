@@ -1,0 +1,95 @@
+<div class="dentist-edit-container">
+  <h4>Edit Panel</h4>
+  <div class="edit-profile-container">
+    <div class="email-alert">
+      <div class="alert alert-danger" *ngIf="openFail">
+        <div class="alert-items">
+          <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+              <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+            </div>
+            <span class="alert-text">
+                    {{failMessage}}
+                </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="alert alert-success" *ngIf="openSuccess">
+    <div class="alert-items">
+      <div class="alert-item static">
+        <div class="alert-icon-wrapper">
+          <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+        </div>
+        <span class="alert-text">
+                    Successfully updated profile.
+                </span>
+      </div>
+    </div>
+  </div>
+
+  <form #editForm="ngForm">
+    <div class="edit-panel">
+      <section class="form-block">
+        <div class="form-group">
+          <label class="required">Email</label>
+          <input type="email" [(ngModel)]="UserInfo.email" #email="ngModel" class="formFields_7" size="25" placeholder="Email" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+          <label class="required">FirstName</label>
+          <input type="text" [(ngModel)]="UserInfo.firstName" #firstName="ngModel" class="formFields_7" size="25" placeholder="FirstName" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+          <label class="required">LastName</label>
+          <input type="text" [(ngModel)]="UserInfo.lastName" #lastName="ngModel" class="formFields_7" size="25" placeholder="LastName" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <div class="select">
+            <select id="city"
+                    name="city"
+                    [(ngModel)]="UserInfo.city"
+                    #city="ngModel"
+                    [ngModelOptions]="{standalone: true}"
+                >
+              <option value={{constants.CITY_SOFIA}}>Sofia</option>
+              <option value={{constants.CITY_VARNA}}>Varna</option>
+              <option value={{constants.CITY_PLOVDIV}}>Plovdiv</option>
+              <option value={{constants.CITY_BURGAS}}>Burgas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dentistType">Type</label>
+          <div class="select">
+            <select id="dentistType"
+                    name="dentistType"
+                    [(ngModel)]="UserInfo.dentistType"
+                    #dentistType="ngModel" [ngModelOptions]="{standalone: true}">
+              <option value={{constants.TYPE_NORMAL}}>Normal</option>
+              <option value={{constants.TYPE_ORTHODONT}}>Orthodont</option>
+              <option value="{{constants.TYPE_SURGEON}}">Surgeon</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>General Information</label>
+          <textarea [(ngModel)]="UserInfo.generalInformation"  #generalInformation="ngModel" class="formFields_7" rows="8" placeholder="Add General Information" [ngModelOptions]="{standalone: true}">
+          </textarea>
+        </div>
+
+      </section>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block"(click)="submit(
+      UserInfo.email,
+    UserInfo.firstName,
+    UserInfo.lastName,
+    dentistType.value,
+    city.value,
+    UserInfo.generalInformation)">Confirm</button>
+  </form>
+</div>

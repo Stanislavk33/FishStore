@@ -1,0 +1,76 @@
+.search-container {
+  position: absolute;
+  width: 900px;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%)
+}
+
+.search-result{
+  left: auto;
+  width: 900px
+}
+
+clr-datagrid {
+  padding-top: 100px;
+  max-width: 850px;
+}
+
+h4 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.hidden-warning {
+  display: none;
+}
+
+.search-box {
+  position: absolute;
+  width: 900px;
+  height: 100px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.criteria {
+  width: 900px;
+}
+
+.search-city {
+  display: inline-block;
+}
+
+.search-name {
+  display: inline-block;
+}
+
+.btn btn-primary {
+  display: inline-block;
+}
+
+.form-block{
+  display: inline-block;
+}
+
+.city-dropdown {
+  display: inline-block;
+  width: 180px;
+}
+
+.type-dropdown {
+  display: inline-block;
+  width: 180px;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+}
+
+.select {
+  display:block;
+}
+

@@ -1,0 +1,88 @@
+<div class="register-container">
+  <div class="alert alert-danger" *ngIf="failMessage">
+    <div class="alert-items">
+      <div class="alert-item static">
+        <div class="alert-icon-wrapper">
+          <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+        </div>
+        <span class="alert-text">
+               {{failMessage}}
+            </span>
+      </div>
+    </div>
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+      <clr-icon aria-hidden="true" shape="close"></clr-icon>
+    </button>
+  </div>
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()"
+          #registerForm="ngForm">
+      <div class="label-login"><label><h2 class="welcome">Registration Panel</h2></label></div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email"
+               id="email"
+               required
+               [(ngModel)]="model.email"
+               name="email"
+               #email="ngModel"
+               placeholder="Email here"
+               size="35">
+        <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"
+               id="password"
+               required
+               [(ngModel)]="model.password"
+               name="password"
+               #password="ngModel"
+               placeholder="Password here"
+               size="35">
+        <div [hidden]="password.valid || password.pristine"
+             class="alert alert-danger">
+          Password is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstName">First name</label>
+        <input type="text"
+               id="firstName"
+               required
+               [(ngModel)]="model.firstName"
+               name="firstName"
+               #firstName="ngModel"
+               placeholder="First name here"
+               size="35">
+        <div [hidden]="firstName.valid || firstName.pristine"
+             class="alert alert-danger">
+          First name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input type="text"
+               id="lastName"
+               required
+               [(ngModel)]="model.lastName"
+               name="lastName"
+               #lastName="ngModel"
+               placeholder="Last name here"
+               size="35">
+        <div [hidden]="lastName.valid || lastName.pristine"
+             class="alert alert-danger">
+          Last name is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block"
+              [disabled]="!registerForm.form.valid">Register
+      </button>
+    </form>
+  </div>
+</div>
+

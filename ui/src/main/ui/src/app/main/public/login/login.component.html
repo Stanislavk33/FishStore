@@ -1,0 +1,51 @@
+<div class="login-container">
+  <div [hidden]="submitted">
+    <form class="login" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="label-login"><label><h2 class="welcome">Login Panel</h2></label></div>
+      <div class="alert alert-danger" *ngIf="error">
+        <div class="alert-items">
+          <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+              <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+            </div>
+            <span class="alert-text">{{error}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="required">Email</label>
+        <input type="email"
+               id="email"
+               aria-label="Email"
+               required
+               [(ngModel)]="model.email"
+               name="email"
+               #email="ngModel"
+               placeholder="Enter email"
+               size="35">
+        <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="required">Password</label>
+        <input type="password"
+               id="password"
+               required
+               [(ngModel)]="model.password"
+               name="password"
+               #password="ngModel"
+               placeholder="Enter password"
+               size="35">
+        <div [hidden]="password.valid || password.pristine"
+             class="alert alert-danger">
+          Password is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.form.valid">
+        Log in
+      </button>
+    </form>
+  </div>
+</div>

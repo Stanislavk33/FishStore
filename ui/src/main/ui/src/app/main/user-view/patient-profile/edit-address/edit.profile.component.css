@@ -1,0 +1,19 @@
+.dentist-edit-container{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 500px;
+}
+
+.edit-panel {
+  width: 700px;
+}
+
+.edit-label{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+h4{
+  text-align: center;
+}

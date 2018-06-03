@@ -1,0 +1,39 @@
+/*
+.header {
+  max-height: 60px;
+}
+*/
+
+.wrapper {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right:60px;
+}
+
+.logo{
+  padding-right: 5px;
+}
+
+.subnav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/*#logo {
+  background-image:  url('../img/logo.jpg');
+  background-size: 100%;
+}*/
+
+.patient-container{
+  background-color: white;
+}
+
+.header-4 {
+  height: 150px;
+}
+
+.branding {
+  margin-right: 250px;
+  margin-left: 200px;
+}

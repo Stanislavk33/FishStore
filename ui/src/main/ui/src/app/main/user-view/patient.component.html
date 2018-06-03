@@ -1,0 +1,46 @@
+<div class="main-container">
+<!--  <header class="header-4">
+    <img src="https://d1af89beukha9h.cloudfront.net/wp-content/uploads/2018/01/Global-Fish-and-Seafood-Market.jpg" width="1800" height="150">
+  </header>-->
+  <header class="header-6">
+    <div class="navButtons">
+      <div class="header-nav nav-justified">
+        <a class="nav-link nav-text" routerLink="/user/profile/edit" routerLinkActive="active">My Profile</a>
+        <a class="nav-link nav-text" routerLink="/patient/profile/edit" routerLinkActive="active">About Us</a>
+        <a class="nav-link nav-text" routerLink="/user/dentists" routerLinkActive="active">Products</a>
+      </div>
+    </div>
+    <div class="branding">
+      <a href="..." class="nav-link">
+        <div class="logo">
+          <img src="http://icons.iconarchive.com/icons/martin-berube/flat-animal/256/shark-icon.png" width="50" height="50">
+        </div>
+        <span class="title">Joe's Fish Store</span>
+      </a>
+    </div>
+    <div class="navButtons">
+      <div class="header-nav nav-justified">
+        <a class="nav-link nav-text" routerLink="/user/blog" routerLinkActive="active">Blog</a>
+        <a class="nav-link nav-text" routerLink="/user/cart" routerLinkActive="active">Shopping Cart</a>
+      </div>
+    </div>
+    <div class="header-actions">
+      <clr-dropdown>
+        <button class="nav-text" clrDropdownTrigger>
+          {{userEmail}}
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu clrPosition="bottom-right" *clrIfOpen>
+          <a clrDropdownItem (click)="editProfile()">Edit Profile</a>
+          <a clrDropdownItem routerLink="/user/changepass" routerLinkActive="active">Change Password</a>
+          <div class="dropdown-divider"></div>
+          <button type="button" clrDropdownItem (click)="logout()">Log Out</button>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+  </header>
+  <div class="patient-router">
+    <router-outlet>
+    </router-outlet>
+  </div>
+</div>
