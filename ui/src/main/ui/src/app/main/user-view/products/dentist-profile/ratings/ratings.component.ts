@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {DentistRating} from "./dentist.rating.model";
-import {OnClickEvent, OnHoverRatingChangeEvent, OnRatingChangeEven} from "angular-star-rating";
+
 import {CommonUtil} from "../../../../../util/common.util";
 import {RatingsService} from "../../../../../services/ratings.service";
 

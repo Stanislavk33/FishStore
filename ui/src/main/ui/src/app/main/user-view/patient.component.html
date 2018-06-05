@@ -25,18 +25,7 @@
       </div>
     </div>
     <div class="header-actions">
-      <clr-dropdown>
-        <button class="nav-text" clrDropdownTrigger>
-          {{userEmail}}
-          <clr-icon shape="caret down"></clr-icon>
-        </button>
-        <clr-dropdown-menu clrPosition="bottom-right" *clrIfOpen>
-          <a clrDropdownItem (click)="editProfile()">Edit Profile</a>
-          <a clrDropdownItem routerLink="/user/changepass" routerLinkActive="active">Change Password</a>
-          <div class="dropdown-divider"></div>
-          <button type="button" clrDropdownItem (click)="logout()">Log Out</button>
-        </clr-dropdown-menu>
-      </clr-dropdown>
+
     </div>
   </header>
   <div class="patient-router">

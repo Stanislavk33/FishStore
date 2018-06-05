@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {UserModel} from "../../../models/user.model";
-import {Comparator} from "clarity-angular";
 import {Router} from "@angular/router";
 import {CommonUtil} from "../../../util/common.util";
 import {UsersService} from "../../../services/users.service";

@@ -9,7 +9,7 @@ export class RatingsService{
   constructor(private http: HttpClient) {
   }
 
-  public getDentistRating(id): Observable<DentistRating[]> {
+  public getDentistRating(id): Observable<any> {
     return this.http.get('rating/' + id);
   }
 

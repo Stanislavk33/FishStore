@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import 'clarity-icons';
-import 'clarity-icons/shapes/essential-shapes';
-import 'clarity-icons/shapes/technology-shapes';
+//import 'clarity-icons';
+//import 'clarity-icons/shapes/essential-shapes';
+//import 'clarity-icons/shapes/technology-shapes';
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserModel} from "../../../../models/user.model";
 import {DentistCommonService} from "../services/dentist.common.service";
-import {CommonUtil} from "../../../../util/common.util";
+//import {CommonUtil} from "../../../../util/common.util";
 
 @Component({
   selector: 'dentist-profile',

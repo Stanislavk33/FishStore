@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {HttpModule, JsonpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import {ClarityModule} from "clarity-angular";
 import {HttpClientModule} from "@angular/common/http";
 import {PatientComponent} from "./main/user-view/patient.component";
 import {ChangePasswordComponent} from "./main/shared-components/change-password/change-password-component";
@@ -16,9 +15,7 @@ import {CommonService} from "./services/common.service";
 import {RoleGuard} from "./guards/role.guard";
 import {UsersService} from "./services/users.service";
 import {AuthGuard} from "./guards/auth.guard";
-import {AmbulatoryComponent} from "./main/user-view/patient-profile/ambulatory/ambulatory.component";
 import {EditProfileComponent} from "./main/user-view/patient-profile/edit-profile/edit-profile.component";
-import {AppointmentsComponent} from "./main/user-view/patient-profile/appointments/appointments.component";
 import {EditPasswordService} from "./main/shared-components/services/edit.password.service";
 import {EditPatientProfileService} from "./main/shared-components/services/edit.patient.service";
 import {AppComponent} from "./main/public/app.component";
@@ -31,7 +28,6 @@ import {DentistProfileComponent} from "./main/user-view/products/dentist-profile
 import {RatingsComponent} from "./main/user-view/products/dentist-profile/ratings/ratings.component";
 import {DentistCommonService} from "./main/user-view/products/services/dentist.common.service";
 import {DatePipe} from "@angular/common";
-import {AmbulatoryService} from "./main/user-view/patient-profile/ambulatory/ambulatory.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RatingsService} from "./services/ratings.service";
 import {EditDentistProfileComponent} from "./main/user-view/patient-profile/edit-address/edit.profile.component";
@@ -51,8 +47,6 @@ import {BlogComponent} from "./main/user-view/blog/blog.component";
     PatientProfileComponent,
     DentistResultsComponent,
     EditProfileComponent,
-    AmbulatoryComponent,
-    AppointmentsComponent,
     EventsComponent,
     DentistProfileComponent,
     RatingsComponent,
@@ -67,7 +61,6 @@ import {BlogComponent} from "./main/user-view/blog/blog.component";
     FormsModule,
     JsonpModule,
     RouterModule,
-    ClarityModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
@@ -80,9 +73,7 @@ import {BlogComponent} from "./main/user-view/blog/blog.component";
     RatingsService,
     EditPasswordService,
     EditPatientProfileService,
-    DentistCommonService,
-    DatePipe,
-    AmbulatoryService,
+    DentistCommonService
   ],
   bootstrap: [MainComponent]
 })

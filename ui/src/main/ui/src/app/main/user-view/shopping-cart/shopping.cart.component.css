@@ -27,10 +27,6 @@ form-block {
   transform: translate(-50%);
 }
 
-clr-modal {
-  height: 750px !important;
-}
-
 .add-event, .labels, .select {
   display: inline-block;
 }

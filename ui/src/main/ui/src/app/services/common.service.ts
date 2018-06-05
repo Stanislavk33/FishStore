@@ -2,7 +2,6 @@ import {HttpClient} from "@angular/common/http";
 import {LoginResultModel} from "../models/login.result.model";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {Constants} from "../models/constants";
 import {LoginModel} from "../main/public/login/model/login.model";
 import {RegisterModel} from "../main/public/register/model/register.model";
 import {UserModel} from "../models/user.model";
@@ -21,7 +20,7 @@ export class CommonService {
       return this.httpClient.post<LoginResultModel>(CommonService.LOGIN_URL, loginModel);
    }
 
-   public register(registerModel: RegisterModel): Observable<LoginResultModel> {
+   public register(registerModel: RegisterModel): Observable<any> {
      return this.registerUser(registerModel);
    }
 
@@ -29,7 +28,7 @@ export class CommonService {
       return this.httpClient.post(CommonService.REGISTER_USER_URL, registerModel);
    }
 
-   public getUserInfo(id:number): Observable<UserModel>{
+   public getUserInfo(id:number): Observable<any>{
      return this.httpClient.get('user/'+ id);
    }
 

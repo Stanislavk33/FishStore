@@ -1,7 +1,4 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import 'clarity-icons';
-import 'clarity-icons/shapes/essential-shapes';
-import 'clarity-icons/shapes/technology-shapes';
 import {CommonUtil} from "../../../../util/common.util";
 import {EditPatientProfileService} from "../../../shared-components/services/edit.patient.service";
 
