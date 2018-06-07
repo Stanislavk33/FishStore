@@ -69,10 +69,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "node_modules/@webcomponents/custom-elements/custom-elements.min.js"
+              "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "src/main/ui/node_modules/jquery/dist/jquery.slim.min.js",
+              "src/main/ui/node_modules/popper.js/dist/umd/popper.min.js",
+              "src/main/ui/node_modules/bootstrap/dist/js/bootstrap.min.js"
+
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/main/ui/node_modules/bootstrap/dist/css/bootstrap.min.css"
+
             ],
             "assets": [
               "src/assets",

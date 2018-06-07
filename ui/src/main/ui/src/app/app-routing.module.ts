@@ -1,7 +1,7 @@
 import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {MainComponent} from "./main/main.component";
-import {PatientComponent} from "./main/user-view/patient.component";
+import {UserComponent} from "./main/user-view/user.component";
 import {RoleGuard} from "./guards/role.guard";
 import {AdminComponent} from "./main/admin-view/admin.component";
 import {AppComponent} from "./main/public/app.component";
@@ -10,8 +10,8 @@ import {RegisterComponent} from "./main/public/register/register.component";
 import {LoginComponent} from "./main/public/login/login.component";
 import {DentistResultsComponent} from "./main/user-view/products/dentist.results.component";
 import {DentistProfileComponent} from "./main/user-view/products/dentist-profile/dentist.profile.component";
-import {EditProfileComponent} from "./main/user-view/patient-profile/edit-profile/edit-profile.component";
-import {PatientProfileComponent} from "./main/user-view/patient-profile/patient-profile.component";
+import {EditProfileComponent} from "./main/user-view/user-profile/edit-profile/edit-profile.component";
+import {UserProfileComponent} from "./main/user-view/user-profile/user-profile.component";
 import {ChangePasswordComponent} from "./main/shared-components/change-password/change-password-component";
 import {ShoppingCartComponent} from "./main/user-view/shopping-cart/shopping.cart.component";
 import {BlogComponent} from "./main/user-view/blog/blog.component";
@@ -30,10 +30,10 @@ const appRoutes: Routes = [
       {path: 'login', component: LoginComponent},
     ]},
 
-    {path: 'user', component: PatientComponent,
+    {path: 'user', component: UserComponent,
       children: [
         {path: '', redirectTo: 'dentists', pathMatch: 'full'},
-        { path: 'profile', component: PatientProfileComponent, children: [
+        { path: 'profile', component: UserProfileComponent, children: [
           { path: '', redirectTo: 'edit', pathMatch: 'full'},
           { path: 'edit', pathMatch: 'full', component: EditProfileComponent},
         ]},

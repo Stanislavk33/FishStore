@@ -5,11 +5,11 @@ import {Router} from "@angular/router";
 @Component({
               moduleId: module.id,
               selector: 'patient-component',
-              templateUrl: 'patient.component.html',
-              styleUrls: ["patient.component.css"],
+              templateUrl: 'user.component.html',
+              styleUrls: ["user.component.css"],
               providers: []
            })
-export class PatientComponent implements OnInit {
+export class UserComponent implements OnInit {
    private userEmail: string = '';
    constructor(private router: Router) {
    }

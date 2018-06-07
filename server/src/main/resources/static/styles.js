@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n"
 
 /***/ }),
 
@@ -532,17 +532,17 @@ if(false) {}
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!******************************!*\
   !*** multi ./src/styles.css ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\FishStore\ui\src\main\ui\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! E:\Projects\NBU\FishStore\ui\src\main\ui\src\styles.css */"./src/styles.css");
 
 
 /***/ })
 
-},[[3,"runtime"]]]);
+},[[2,"runtime"]]]);
 //# sourceMappingURL=styles.js.map
